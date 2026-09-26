@@ -5,8 +5,7 @@ struct ContentView: View {
     var body: some View {
         
         ZStack {
-            
-            
+            //背景
             Color("background")
                 .ignoresSafeArea()
             ZStack {
@@ -119,19 +118,19 @@ struct ContentView: View {
                     .frame(width: 80, height: 5)
                     .foregroundStyle(.black)
                     .offset(y: 60)
-                //左牙齒
-                Rectangle()
-                    .trim(from: 0.25, to: 0.75)
-                    .frame(width: 20, height: 20)
-                    .offset(x: 25, y: 62)
-                    .rotationEffect(.degrees(45))
-                    .foregroundStyle(.white)
                 //右牙齒
                 Rectangle()
-                    .trim(from: 0.25, to: 0.75)
+                    .trim(from: 0, to: 0.5)
                     .frame(width: 20, height: 20)
-                    .offset(x: 65, y: 24)
-                    .rotationEffect(.degrees(45))
+                    .offset(x:-20, y: 62)
+                    .rotationEffect(.degrees(-45))
+                    .foregroundStyle(.white)
+                //左牙齒
+                Rectangle()
+                    .trim(from: 0, to: 0.5)
+                    .frame(width: 20, height: 20)
+                    .offset(x: -60, y: 20)
+                    .rotationEffect(.degrees(-45))
                     .foregroundStyle(.white)
                 //左手臂
                 Rectangle()
